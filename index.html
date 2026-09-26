@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -9,167 +8,88 @@
 <meta name="description" content="HWP - HR World Prime | Recruitment, HR Solutions, Career & Professional Support">
 
 <style>
-:root{
---green:#082d20;
---green2:#0d4b35;
---green3:#146447;
---gold:#d6b13f;
---gold2:#f0d875;
---cream:#f7f6ef;
---white:#fff;
---text:#17251e;
---muted:#68756e;
-}
-
 *{margin:0;padding:0;box-sizing:border-box}
-
 html{scroll-behavior:smooth}
-
 body{
 font-family:Arial,Helvetica,sans-serif;
-background:var(--cream);
-color:var(--text);
+background:#f7f6ef;
+color:#17251e;
 line-height:1.6;
-overflow-x:hidden;
 }
-
 a{text-decoration:none}
-
-.container{
-width:90%;
-max-width:1180px;
-margin:auto;
-}
+.container{width:90%;max-width:1180px;margin:auto}
 
 /* HEADER */
-
 header{
-position:sticky;
-top:0;
-z-index:999;
-background:rgba(8,45,32,.95);
-backdrop-filter:blur(14px);
+position:sticky;top:0;z-index:999;
+background:rgba(8,45,32,.97);
 border-bottom:1px solid rgba(214,177,63,.25);
 }
-
 .navbar{
 min-height:76px;
 display:flex;
 align-items:center;
 justify-content:space-between;
 }
-
 .logo{
-color:white;
+color:#fff;
 font-size:30px;
 font-weight:900;
 letter-spacing:2px;
 }
-
-.logo span{color:var(--gold)}
-
-.nav{
-display:flex;
-align-items:center;
-gap:27px;
-}
-
-.nav a{
-color:#edf4ef;
-font-size:14px;
-font-weight:600;
-transition:.25s;
-}
-
-.nav a:hover{color:var(--gold2)}
-
+.logo span{color:#d6b13f}
+.nav{display:flex;gap:27px;align-items:center}
+.nav a{color:#edf4ef;font-size:14px;font-weight:600}
+.nav a:hover{color:#f0d875}
 .nav-cta{
-background:var(--gold);
-color:var(--green)!important;
+background:#d6b13f;
+color:#082d20!important;
 padding:11px 18px;
 border-radius:7px;
 }
 
 /* HERO */
-
 .hero{
-min-height:700px;
-position:relative;
-overflow:hidden;
-background:
-radial-gradient(circle at 82% 35%,rgba(214,177,63,.18),transparent 25%),
-radial-gradient(circle at 15% 80%,rgba(20,100,71,.45),transparent 30%),
-linear-gradient(135deg,#06271c,#0d4b35 60%,#082d20);
-color:white;
+min-height:680px;
 display:flex;
 align-items:center;
+overflow:hidden;
+color:#fff;
+background:
+radial-gradient(circle at 80% 35%,rgba(214,177,63,.2),transparent 25%),
+linear-gradient(135deg,#06271c,#0d4b35 60%,#082d20);
 }
-
-.hero:before{
-content:"";
-position:absolute;
-width:520px;
-height:520px;
-border:1px solid rgba(214,177,63,.16);
-border-radius:50%;
-right:-180px;
-top:-120px;
-}
-
-.hero:after{
-content:"";
-position:absolute;
-width:370px;
-height:370px;
-border:1px solid rgba(255,255,255,.07);
-border-radius:50%;
-right:-80px;
-bottom:-150px;
-}
-
 .hero-grid{
 display:grid;
 grid-template-columns:1.15fr .85fr;
 gap:50px;
 align-items:center;
-position:relative;
-z-index:2;
 }
-
 .badge{
-display:inline-flex;
+display:inline-block;
 padding:8px 15px;
 border:1px solid rgba(214,177,63,.5);
-color:var(--gold2);
+color:#f0d875;
 border-radius:30px;
 font-size:12px;
 font-weight:bold;
 letter-spacing:1px;
-margin-bottom:23px;
+margin-bottom:22px;
 }
-
 .hero h1{
 font-size:62px;
 line-height:1.05;
 letter-spacing:-2px;
-margin-bottom:24px;
+margin-bottom:22px;
 }
-
-.hero h1 span{color:var(--gold)}
-
+.hero h1 span{color:#d6b13f}
 .hero-text{
-max-width:670px;
+max-width:650px;
 color:#dce9e2;
 font-size:18px;
-margin-bottom:32px;
+margin-bottom:30px;
 }
-
-.hero-buttons{
-display:flex;
-gap:13px;
-flex-wrap:wrap;
-}
-
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
 .btn{
 padding:14px 23px;
 border-radius:7px;
@@ -178,395 +98,718 @@ font-weight:800;
 display:inline-block;
 transition:.25s;
 }
-
 .btn:hover{transform:translateY(-3px)}
+.gold{background:#d6b13f;color:#082d20}
+.outline{border:1px solid rgba(255,255,255,.4);color:#fff}
 
-.btn-gold{
-background:var(--gold);
-color:#092c20;
-box-shadow:0 12px 30px rgba(214,177,63,.18);
-}
-
-.btn-border{
-border:1px solid rgba(255,255,255,.4);
-color:white;
-}
-
-/* 3D VISUAL */
-
-.hero-visual{
-height:450px;
+/* HERO VISUAL */
+.visual{
+height:430px;
 position:relative;
-perspective:1000px;
 }
-
-.orbit{
-position:absolute;
-width:350px;
-height:350px;
-border:1px solid rgba(214,177,63,.25);
-border-radius:50%;
-top:45px;
-left:50%;
-transform:translateX(-50%) rotateX(62deg);
-}
-
-.orbit.two{
-width:280px;
-height:280px;
-top:80px;
-border-color:rgba(255,255,255,.12);
-}
-
 .core{
 position:absolute;
-width:180px;
-height:180px;
-top:130px;
-left:50%;
-transform:translateX(-50%) rotateX(8deg) rotateY(-8deg);
-background:linear-gradient(145deg,#126447,#082d20);
-border:1px solid rgba(214,177,63,.55);
-border-radius:28px;
-box-shadow:0 35px 70px rgba(0,0,0,.35),inset 0 1px 1px rgba(255,255,255,.15);
+width:190px;height:190px;
+top:115px;left:50%;
+transform:translateX(-50%);
+border-radius:30px;
+background:linear-gradient(145deg,#146447,#082d20);
+border:1px solid rgba(214,177,63,.6);
+box-shadow:0 35px 70px rgba(0,0,0,.35);
 display:flex;
-flex-direction:column;
 align-items:center;
 justify-content:center;
+flex-direction:column;
 }
-
-.core strong{
-font-size:48px;
-letter-spacing:4px;
-}
-
-.core small{
-color:var(--gold2);
-letter-spacing:2px;
-font-size:11px;
-}
-
-.float-card{
+.core strong{font-size:50px;letter-spacing:4px}
+.core small{color:#f0d875;font-size:11px;letter-spacing:2px}
+.orbit{
 position:absolute;
-padding:17px 20px;
-border-radius:13px;
-background:rgba(255,255,255,.09);
-border:1px solid rgba(255,255,255,.15);
-backdrop-filter:blur(14px);
-box-shadow:0 20px 45px rgba(0,0,0,.2);
-}
-
-.float-card strong{
-display:block;
-font-size:14px;
-color:white;
-}
-
-.float-card small{
-color:#b8cbc1;
-font-size:11px;
-}
-
-.card-one{top:35px;left:0}
-.card-two{right:0;top:145px}
-.card-three{left:25px;bottom:35px}
-
-.gold-dot{
-width:10px;
-height:10px;
-background:var(--gold);
+width:350px;height:350px;
+top:40px;left:50%;
+transform:translateX(-50%);
+border:1px solid rgba(214,177,63,.3);
 border-radius:50%;
-display:inline-block;
-margin-right:7px;
 }
+.card{
+position:absolute;
+padding:16px 19px;
+background:rgba(255,255,255,.09);
+border:1px solid rgba(255,255,255,.16);
+border-radius:13px;
+backdrop-filter:blur(12px);
+box-shadow:0 20px 40px rgba(0,0,0,.2);
+}
+.card strong{display:block;color:#fff;font-size:14px}
+.card small{color:#b8cbc1;font-size:11px}
+.c1{top:25px;left:0}
+.c2{top:150px;right:0}
+.c3{bottom:25px;left:25px}
 
 /* STATS */
-
-.stats{
-background:white;
-border-bottom:1px solid #e6e8e3;
-}
-
+.stats{background:#fff}
 .stats-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
 }
-
 .stat{
-padding:27px 20px;
 text-align:center;
-border-right:1px solid #e7e9e5;
+padding:26px 15px;
+border-right:1px solid #e5e7e2;
 }
-
-.stat:last-child{border-right:0}
-
+.stat:last-child{border:0}
 .stat strong{
 display:block;
-font-size:28px;
-color:var(--green);
+font-size:27px;
+color:#082d20;
 }
+.stat span{font-size:12px;color:#68756e}
 
-.stat span{
-font-size:12px;
-color:var(--muted);
-}
-
-/* SECTIONS */
-
-.section{
-padding:90px 0;
-}
-
-.white{background:white}
-
-.heading{
-max-width:700px;
-margin-bottom:45px;
-}
-
-.heading.center{
-text-align:center;
-margin-left:auto;
-margin-right:auto;
-}
-
+/* GENERAL */
+.section{padding:85px 0}
+.white{background:#fff}
+.heading{max-width:700px;margin-bottom:40px}
+.center{text-align:center;margin-left:auto;margin-right:auto}
 .eyebrow{
 color:#a07d13;
 font-size:12px;
-letter-spacing:2px;
 font-weight:900;
+letter-spacing:2px;
 text-transform:uppercase;
 margin-bottom:10px;
 }
-
 .heading h2{
-color:var(--green);
 font-size:42px;
 line-height:1.15;
+color:#082d20;
 margin-bottom:14px;
 }
+.heading p{color:#68756e}
 
-.heading p{color:var(--muted)}
+/* ABOUT */
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+.about h2{
+font-size:43px;
+line-height:1.15;
+color:#082d20;
+margin-bottom:20px;
+}
+.about p{color:#68756e;margin-bottom:15px}
+.founder{
+background:linear-gradient(145deg,#082d20,#0d4b35);
+color:#fff;
+padding:45px;
+border-radius:22px;
+min-height:300px;
+box-shadow:0 25px 60px rgba(8,45,32,.2);
+}
+.founder small{
+color:#f0d875;
+letter-spacing:2px;
+font-weight:bold;
+}
+.founder h3{font-size:36px;margin-top:12px}
+.founder .role{color:#d2e0d8;margin-bottom:22px}
+.founder p{color:#dce8e1}
 
-/* AUDIENCE */
-
-.audience{
+/* SOLUTIONS */
+.two{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:25px;
 }
-
-.audience-card{
-position:relative;
-padding:42px;
-min-height:320px;
+.box{
+padding:40px;
 border-radius:18px;
-overflow:hidden;
 border:1px solid #e1e5df;
-background:white;
+background:#fff;
 box-shadow:0 20px 50px rgba(20,45,32,.06);
-transition:.3s;
 }
-
-.audience-card:hover{
-transform:translateY(-8px);
-box-shadow:0 25px 60px rgba(20,45,32,.12);
-}
-
-.audience-card.dark{
+.box.dark{
 background:linear-gradient(145deg,#082d20,#0d4b35);
-color:white;
+color:#fff;
 border:0;
 }
-
-.audience-card:after{
-content:"";
-position:absolute;
-width:180px;
-height:180px;
-border-radius:50%;
-background:rgba(214,177,63,.08);
-right:-70px;
-bottom:-80px;
-}
-
-.icon{
-width:50px;
-height:50px;
-border-radius:12px;
-background:#f3edcf;
-color:#8f7012;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:22px;
-margin-bottom:22px;
-}
-
-.audience-card h3{
+.box h3{
 font-size:27px;
+color:#082d20;
 margin-bottom:10px;
-color:var(--green);
 }
-
-.audience-card.dark h3{color:white}
-
-.audience-card p{
-color:var(--muted);
-margin-bottom:22px;
-}
-
-.audience-card.dark p{color:#d2e0d8}
-
-.list{
-display:grid;
-gap:10px;
-}
-
-.list div{
-font-size:14px;
-color:#3f4c45;
-}
-
+.box.dark h3{color:#fff}
+.box p{color:#68756e;margin-bottom:20px}
+.box.dark p{color:#d2e0d8}
+.list{display:grid;gap:10px}
+.list div{font-size:14px;color:#3f4c45}
 .dark .list div{color:#e1ebe5}
-
-.list span{
-color:#a78316;
-font-weight:bold;
-margin-right:8px;
-}
+.tick{color:#c09b22;font-weight:bold;margin-right:7px}
 
 /* SERVICES */
-
 .services{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:20px;
 }
-
 .service{
 padding:30px;
-border:1px solid #e3e6e0;
 background:#fff;
+border:1px solid #e3e6e0;
 border-radius:15px;
 transition:.3s;
-position:relative;
-overflow:hidden;
 }
-
 .service:hover{
 transform:translateY(-7px);
-border-color:rgba(214,177,63,.7);
+border-color:#d6b13f;
 box-shadow:0 20px 45px rgba(10,45,30,.08);
 }
-
-.service-number{
-color:#b28e1c;
+.service span{
 font-size:11px;
 font-weight:900;
 letter-spacing:2px;
-margin-bottom:22px;
+color:#b28e1c;
 }
-
 .service h3{
-color:var(--green);
 font-size:20px;
-margin-bottom:11px;
+color:#082d20;
+margin:18px 0 10px;
 }
-
-.service p{
-color:var(--muted);
-font-size:14px;
-}
+.service p{font-size:14px;color:#68756e}
 
 /* PROCESS */
-
 .process{
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:18px;
 }
-
-.process-card{
+.step{
 padding:28px;
 background:#f5f6f1;
-border-radius:15px;
 border:1px solid #e4e7e1;
+border-radius:15px;
 }
-
-.process-card .num{
-color:var(--gold);
-background:var(--green);
-width:35px;
-height:35px;
+.num{
+width:35px;height:35px;
+border-radius:50%;
+background:#082d20;
+color:#d6b13f;
 display:flex;
 align-items:center;
 justify-content:center;
-border-radius:50%;
-font-size:12px;
 font-weight:bold;
-margin-bottom:18px;
+font-size:12px;
+margin-bottom:17px;
+}
+.step h3{color:#082d20;font-size:18px;margin-bottom:8px}
+.step p{color:#68756e;font-size:13px}
+
+/* CTA */
+.cta{
+background:linear-gradient(135deg,#082d20,#0d4b35);
+color:#fff;
+text-align:center;
+padding:80px 20px;
+}
+.cta h2{font-size:42px;margin-bottom:12px}
+.cta p{
+color:#d7e5de;
+max-width:650px;
+margin:0 auto 27px;
 }
 
-.process-card h3{
-color:var(--green);
-font-size:18px;
-margin-bottom:8px;
-}
-
-.process-card p{
-color:var(--muted);
-font-size:13px;
-}
-
-/* ABOUT */
-
-.about-grid{
+/* CONTACT */
+.contact{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:65px;
-align-items:center;
+gap:25px;
 }
-
-.about-text h2{
-color:var(--green);
-font-size:43px;
-line-height:1.15;
-margin-bottom:20px;
+.contact-card{
+background:#fff;
+padding:38px;
+border-radius:16px;
+border:1px solid #e2e6df;
 }
-
-.about-text p{
-color:var(--muted);
-margin-bottom:15px;
+.contact-card h3{
+font-size:23px;
+color:#082d20;
+margin-bottom:8px;
 }
-
-.founder{
-position:relative;
-background:linear-gradient(145deg,#082d20,#0d4b35);
-color:white;
-border-radius:22px;
-padding:45px;
-min-height:330px;
-overflow:hidden;
-box-shadow:0 25px 60px rgba(8,45,32,.2);
+.contact-card p{color:#68756e;margin-bottom:20px}
+.contact-buttons{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
 }
-
-.founder:after{
-content:"HWP";
-position:absolute;
-font-size:130px;
-font-weight:900;
-color:rgba(255,255,255,.035);
-right:-15px;
-bottom:-20px;
-}
-
-.founder-label{
-color:var(--gold2);
-font-size:11px;
-letter-spacing:2px;
+.contact-btn{
+padding:12px 17px;
+background:#082d20;
+color:#fff;
+border-radius:6px;
+font-size:13px;
 font-weight:bold;
 }
+.contact-btn.gold{
+background:#d6b13f;
+color:#082d20;
+}
+
+/* FOOTER */
+footer{
+background:#051e15;
+color:#bdcbc3;
+padding:35px 0;
+}
+.footer{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+}
+.footer-logo{
+font-size:23px;
+font-weight:900;
+color:#fff;
+}
+.footer-logo span{color:#d6b13f}
+.footer small{font-size:12px}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+right:22px;
+bottom:22px;
+z-index:2000;
+background:#25D366;
+color:#fff;
+width:58px;height:58px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+/* MOBILE */
+@media(max-width:900px){
+.nav{display:none}
+.hero{padding:75px 0 50px}
+.hero-grid{grid-template-columns:1fr}
+.hero h1{font-size:48px}
+.visual{height:390px}
+.stats-grid{grid-template-columns:1fr 1fr}
+.two,.about,.contact{grid-template-columns:1fr}
+.services{grid-template-columns:1fr 1fr}
+.process{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+.hero h1{font-size:39px}
+.hero-text{font-size:16px}
+.visual{transform:scale(.85);margin-left:-8%;width:116%}
+.section{padding:65px 0}
+.heading h2,.about h2{font-size:32px}
+.services,.process{grid-template-columns:1fr}
+.stat{padding:20px 10px}
+.stat strong{font-size:22px}
+.footer{flex-direction:column;text-align:center}
+.cta h2{font-size:31px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container navbar">
+
+<div class="logo">HWP<span>.</span></div>
+
+<nav class="nav">
+<a href="#about">About</a>
+<a href="#solutions">Solutions</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+<a href="#contact" class="nav-cta">Work With HWP</a>
+</nav>
+
+</div>
+</header>
+
+<section class="hero">
+<div class="container hero-grid">
+
+<div>
+<div class="badge">HR • RECRUITMENT • CAREER</div>
+
+<h1>
+People.<br>
+Careers.<br>
+<span>Possibilities.</span>
+</h1>
+
+<p class="hero-text">
+HWP — HR World Prime connects businesses with relevant
+talent and professionals with practical career, job and HR support.
+</p>
+
+<div class="buttons">
+<a href="#contact" class="btn gold">Hire With HWP</a>
+<a href="#services" class="btn outline">Explore Services</a>
+</div>
+</div>
+
+<div class="visual">
+<div class="orbit"></div>
+
+<div class="core">
+<strong>HWP</strong>
+<small>HR WORLD PRIME</small>
+</div>
+
+<div class="card c1">
+<strong>Recruitment</strong>
+<small>IT & Non-IT Hiring</small>
+</div>
+
+<div class="card c2">
+<strong>Career Support</strong>
+<small>Jobs • Growth • Direction</small>
+</div>
+
+<div class="card c3">
+<strong>HR Solutions</strong>
+<small>People • Process • Business</small>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="stats">
+<div class="container stats-grid">
+
+<div class="stat">
+<strong>IT</strong>
+<span>Recruitment</span>
+</div>
+
+<div class="stat">
+<strong>Non-IT</strong>
+<span>Recruitment</span>
+</div>
+
+<div class="stat">
+<strong>HR</strong>
+<span>Solutions</span>
+</div>
+
+<div class="stat">
+<strong>Career</strong>
+<span>Support</span>
+</div>
+
+</div>
+</section>
+
+<section class="section white" id="about">
+<div class="container about">
+
+<div>
+<div class="eyebrow">About HWP</div>
+
+<h2>One platform.<br>Multiple HR & Career needs.</h2>
+
+<p>
+HWP — HR World Prime works across recruitment, HR support,
+career guidance and professional development.
+</p>
+
+<p>
+We first understand the actual requirement and then create
+a practical direction around it.
+</p>
+
+<p>
+For companies, that means hiring support and recruitment
+collaboration. For professionals, it means focused career
+and job-search support.
+</p>
+</div>
+
+<div class="founder">
+<small>LEADERSHIP</small>
+<h3>Nidhi</h3>
+<div class="role">Founder & Director — HWP</div>
+<p>
+Working across recruitment, HR and career-focused solutions
+for businesses and professionals.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="solutions">
+<div class="container">
+
+<div class="heading center">
+<div class="eyebrow">Who We Help</div>
+<h2>Built for Businesses & Professionals</h2>
+<p>
+Different requirements need different solutions.
+HWP supports both sides of the professional ecosystem.
+</p>
+</div>
+
+<div class="two">
+
+<div class="box dark">
+<h3>For Companies</h3>
+<p>
+Recruitment and HR support for companies looking to hire
+relevant talent and build teams.
+</p>
+
+<div class="list">
+<div><span class="tick">✓</span>IT & Non-IT Recruitment</div>
+<div><span class="tick">✓</span>Hiring Collaboration</div>
+<div><span class="tick">✓</span>Talent Sourcing</div>
+<div><span class="tick">✓</span>Recruitment Partnerships</div>
+<div><span class="tick">✓</span>HR Support</div>
+</div>
+</div>
+
+<div class="box">
+<h3>For Professionals</h3>
+<p>
+Practical support for freshers, experienced professionals
+and people planning a career move.
+</p>
+
+<div class="list">
+<div><span class="tick">✓</span>Career Direction</div>
+<div><span class="tick">✓</span>Job Search Strategy</div>
+<div><span class="tick">✓</span>Resume Support</div>
+<div><span class="tick">✓</span>Interview Preparation</div>
+<div><span class="tick">✓</span>Professional Support</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section white" id="services">
+<div class="container">
+
+<div class="heading">
+<div class="eyebrow">What We Do</div>
+<h2>Services designed around the requirement.</h2>
+<p>
+Focused support across hiring, HR, jobs and professional growth.
+</p>
+</div>
+
+<div class="services">
+
+<div class="service">
+<span>01 / RECRUITMENT</span>
+<h3>IT & Non-IT Hiring</h3>
+<p>Recruitment support for organizations looking for relevant candidates across functions.</p>
+</div>
+
+<div class="service">
+<span>02 / BUSINESS</span>
+<h3>Hiring Collaboration</h3>
+<p>Collaboration support for companies with active or recurring hiring requirements.</p>
+</div>
+
+<div class="service">
+<span>03 / HR</span>
+<h3>HR Solutions</h3>
+<p>Practical HR support around people, processes and business requirements.</p>
+</div>
+
+<div class="service">
+<span>04 / CAREER</span>
+<h3>Career Guidance</h3>
+<p>Career direction for professionals who are confused, changing roles or planning their next move.</p>
+</div>
+
+<div class="service">
+<span>05 / JOB SEARCH</span>
+<h3>Job Search Support</h3>
+<p>Practical guidance for applications, positioning, job search and follow-up.</p>
+</div>
+
+<div class="service">
+<span>06 / PROFESSIONAL</span>
+<h3>Professional Growth</h3>
+<p>Resume, interview and professional development support.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="heading center">
+<div class="eyebrow">Our Approach</div>
+<h2>Simple. Clear. Requirement-first.</h2>
+<p>
+We keep the process focused instead of making every requirement
+fit the same solution.
+</p>
+</div>
+
+<div class="process">
+
+<div class="step">
+<div class="num">01</div>
+<h3>Understand</h3>
+<p>Understand the actual business or career requirement.</p>
+</div>
+
+<div class="step">
+<div class="num">02</div>
+<h3>Identify</h3>
+<p>Identify the right direction and relevant solution.</p>
+</div>
+
+<div class="step">
+<div class="num">03</div>
+<h3>Support</h3>
+<p>Provide focused support around the requirement.</p>
+</div>
+
+<div class="step">
+<div class="num">04</div>
+<h3>Move Forward</h3>
+<p>Keep communication practical and action-oriented.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="cta">
+<div class="container">
+
+<h2>Have a Hiring or Career Requirement?</h2>
+
+<p>
+Tell HWP what you are looking for.
+Let's explore the right way to move forward.
+</p>
+
+<div class="buttons" style="justify-content:center">
+
+<a class="btn gold"
+href="https://wa.me/918700722831?text=Hi%20HWP%2C%20I%20would%20like%20to%20discuss%20a%20hiring%20or%20career%20requirement."
+target="_blank">
+WhatsApp HWP
+</a>
+
+<a class="btn outline"
+href="mailto:careers.hrworldprime@outlook.in">
+Email HWP
+</a>
+
+</div>
+</div>
+</section>
+
+<section class="section white" id="contact">
+<div class="container">
+
+<div class="heading center">
+<div class="eyebrow">Connect With HWP</div>
+<h2>Let's Start a Conversation.</h2>
+<p>
+For hiring collaborations, HR requirements, career support
+or professional queries.
+</p>
+</div>
+
+<div class="contact">
+
+<div class="contact-card">
+<h3>Looking to Hire?</h3>
+<p>
+Share your hiring requirement with HWP for IT & Non-IT
+recruitment or collaboration.
+</p>
+
+<div class="contact-buttons">
+
+<a class="contact-btn gold"
+href="https://wa.me/918700722831?text=Hi%20HWP%2C%20we%20have%20a%20hiring%20requirement%20and%20would%20like%20to%20discuss%20a%20hiring%20collaboration."
+target="_blank">
+WhatsApp Hiring Team
+</a>
+
+<a class="contact-btn"
+href="mailto:careers.hrworldprime@outlook.in?subject=Hiring%20Requirement">
+Send Email
+</a>
+
+</div>
+</div>
+
+<div class="contact-card">
+<h3>Looking for Career Support?</h3>
+<p>
+Connect for career direction, job search, resume,
+interview or professional support.
+</p>
+
+<div class="contact-buttons">
+
+<a class="contact-btn gold"
+href="https://wa.me/918700722831?text=Hi%20HWP%2C%20I%20would%20like%20to%20discuss%20a%20career%20or%20job-related%20query."
+target="_blank">
+Drop a WhatsApp Message
+</a>
+
+<a class="contact-btn"
+href="mailto:careers.hrworldprime@outlook.in?subject=Career%20Support%20Query">
+Email HWP
+</a>
+
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container footer">
+
+<div>
+<div class="footer-logo">HWP<span>.</span></div>
+<small>HR World Prime</small>
+</div>
+
+<small>© 2026 HWP. All rights reserved.</small>
+
+</div>
+</footer>
+
+<a class="whatsapp"
+href="https://wa.me/918700722831?text=Hi%20HWP%2C%20I%20would%20like%20to%20connect%20regarding%20a%20hiring%20or%20career%20requirement."
+target="_blank"
+aria-label="WhatsApp HWP">
+💬
+</a>
+
+</body>
+</html>}
 
 .founder h3{
 font-size:35px;
