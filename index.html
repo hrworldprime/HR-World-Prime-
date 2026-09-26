@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HWP | HR World Prime</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f8f5;
+    color: #1d2a22;
+    line-height: 1.6;
+}
+
+header {
+    background: #123d2b;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #d4af37;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 15px;
+}
+
+.hero {
+    padding: 90px 8%;
+    background: linear-gradient(135deg, #123d2b, #1d5a3e);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 52px;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #d4af37;
+}
+
+.hero p {
+    max-width: 650px;
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background: #d4af37;
+    color: #17251c;
+    padding: 13px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.button.secondary {
+    background: transparent;
+    color: white;
+    border: 1px solid #d4af37;
+}
+
+section {
+    padding: 70px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 34px;
+    color: #123d2b;
+}
+
+.section-title p {
+    margin-top: 10px;
+    color: #666;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+}
+
+.card h3 {
+    color: #123d2b;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #666;
+}
+
+.about {
+    background: white;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-content p {
+    color: #555;
+    margin-top: 15px;
+}
+
+.cta {
+    background: #123d2b;
+    color: white;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    margin-bottom: 25px;
+}
+
+footer {
+    background: #0d2b1e;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+footer span {
+    color: #d4af37;
+}
+
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 7px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">HWP<span>.</span></div>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>People. Careers. <span>Business.</span></h1>
+
+    <p>
+        HR, recruitment and career solutions designed to connect
+        the right people with the right opportunities.
+    </p>
+
+    <a href="#contact" class="button">Work With HWP</a>
+    <a href="#services" class="button secondary">Explore Services</a>
+</section>
+
+<section id="about" class="about">
+
+    <div class="section-title">
+        <h2>About HWP</h2>
+        <p>Human-focused solutions for modern careers and businesses.</p>
+    </div>
+
+    <div class="about-content">
+
+        <p>
+            HWP — HR World Prime — works across recruitment,
+            HR solutions, career support and professional development.
+        </p>
+
+        <p>
+            We support companies with hiring and HR requirements,
+            while helping candidates navigate their careers,
+            job search and professional growth.
+        </p>
+
+    </div>
+
+</section>
+
+<section id="solutions">
+
+    <div class="section-title">
+        <h2>What We Do</h2>
+        <p>Solutions for both businesses and professionals.</p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Recruitment</h3>
+            <p>
+                IT & Non-IT hiring support with a focus on
+                relevant profiles and practical recruitment needs.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>HR Solutions</h3>
+            <p>
+                HR support and people solutions designed around
+                business requirements and workforce needs.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Career Support</h3>
+            <p>
+                Career guidance, resume support, interview preparation
+                and practical job-search assistance.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="services">
+
+    <div class="section-title">
+        <h2>Our Services</h2>
+        <p>Choose the support that fits your requirement.</p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>For Companies</h3>
+            <p>
+                Recruitment support, hiring collaboration,
+                HR assistance and talent sourcing.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>For Candidates</h3>
+            <p>
+                Resume review, job-search strategy,
+                interview preparation and career guidance.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Professional Growth</h3>
+            <p>
+                Support for LinkedIn presence, career direction,
+                personal development and professional positioning.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="cta" id="contact">
+
+    <h2>Let's Work Together</h2>
+
+    <p>
+        Looking to hire, grow your career or explore the right HR solution?
+        Let's connect.
+    </p>
+
+    <a href="https://www.linkedin.com/" class="button">
+        Connect on LinkedIn
+    </a>
+
+</section>
+
+<footer>
+    <p>
+        © 2026 <span>HWP</span> — HR World Prime. All rights reserved.
+    </p>
+</footer>
+
+</body>
+</html>
