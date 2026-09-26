@@ -6,182 +6,552 @@
 
 <title>HWP | HR World Prime</title>
 
+<meta name="description" content="HWP - HR World Prime provides recruitment, HR solutions, hiring collaboration and career support for companies and professionals.">
+
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #f8f8f5;
-    color: #1d2a22;
-    line-height: 1.6;
+html{
+    scroll-behavior:smooth;
 }
 
-header {
-    background: #123d2b;
-    color: white;
-    padding: 20px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f8f5;
+    color:#1b2b22;
+    line-height:1.6;
 }
 
-.logo {
-    font-size: 28px;
-    font-weight: bold;
+a{
+    text-decoration:none;
 }
 
-.logo span {
-    color: #d4af37;
+.container{
+    width:88%;
+    max-width:1200px;
+    margin:auto;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 25px;
-    font-size: 15px;
+/* HEADER */
+
+header{
+    background:#103d2b;
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:1px solid rgba(212,175,55,.25);
 }
 
-.hero {
-    padding: 90px 8%;
-    background: linear-gradient(135deg, #123d2b, #1d5a3e);
-    color: white;
+.navbar{
+    min-height:78px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.hero h1 {
-    font-size: 52px;
-    max-width: 800px;
-    margin-bottom: 20px;
+.logo{
+    font-size:30px;
+    font-weight:800;
+    letter-spacing:1px;
 }
 
-.hero h1 span {
-    color: #d4af37;
+.logo span{
+    color:#d4af37;
 }
 
-.hero p {
-    max-width: 650px;
-    font-size: 19px;
-    margin-bottom: 30px;
+.nav-links{
+    display:flex;
+    gap:28px;
+    align-items:center;
 }
 
-.button {
-    display: inline-block;
-    background: #d4af37;
-    color: #17251c;
-    padding: 13px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-right: 10px;
+.nav-links a{
+    color:white;
+    font-size:14px;
+    font-weight:500;
 }
 
-.button.secondary {
-    background: transparent;
-    color: white;
-    border: 1px solid #d4af37;
+.nav-links a:hover{
+    color:#d4af37;
 }
 
-section {
-    padding: 70px 8%;
+.nav-btn{
+    background:#d4af37;
+    color:#15291e !important;
+    padding:11px 18px;
+    border-radius:5px;
+    font-weight:700 !important;
 }
 
-.section-title {
-    text-align: center;
-    margin-bottom: 40px;
+/* HERO */
+
+.hero{
+    background:
+    linear-gradient(120deg,#103d2b 0%,#18583e 65%,#123f2d 100%);
+    color:white;
+    padding:105px 0 100px;
 }
 
-.section-title h2 {
-    font-size: 34px;
-    color: #123d2b;
+.hero-content{
+    max-width:850px;
 }
 
-.section-title p {
-    margin-top: 10px;
-    color: #666;
+.badge{
+    display:inline-block;
+    border:1px solid rgba(212,175,55,.6);
+    color:#e4c55d;
+    padding:7px 14px;
+    border-radius:30px;
+    font-size:13px;
+    margin-bottom:22px;
 }
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+.hero h1{
+    font-size:58px;
+    line-height:1.1;
+    margin-bottom:24px;
+    letter-spacing:-1px;
 }
 
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    border: 1px solid #e5e5e5;
+.hero h1 span{
+    color:#d4af37;
 }
 
-.card h3 {
-    color: #123d2b;
-    margin-bottom: 12px;
+.hero p{
+    max-width:700px;
+    font-size:19px;
+    color:#e7eee9;
+    margin-bottom:32px;
 }
 
-.card p {
-    color: #666;
+.buttons{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
 }
 
-.about {
-    background: white;
+.btn{
+    display:inline-block;
+    padding:14px 24px;
+    border-radius:5px;
+    font-weight:700;
+    font-size:14px;
 }
 
-.about-content {
-    max-width: 900px;
-    margin: auto;
-    text-align: center;
+.btn-gold{
+    background:#d4af37;
+    color:#14271d;
 }
 
-.about-content p {
-    color: #555;
-    margin-top: 15px;
+.btn-outline{
+    border:1px solid #d4af37;
+    color:white;
 }
 
-.cta {
-    background: #123d2b;
-    color: white;
-    text-align: center;
+/* INTRO */
+
+.intro{
+    padding:75px 0;
+    background:white;
 }
 
-.cta h2 {
-    font-size: 36px;
-    margin-bottom: 15px;
+.intro-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
 }
 
-.cta p {
-    margin-bottom: 25px;
+.small-title{
+    color:#a88418;
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:12px;
 }
 
-footer {
-    background: #0d2b1e;
-    color: white;
-    text-align: center;
-    padding: 25px;
+.intro h2{
+    font-size:39px;
+    line-height:1.2;
+    color:#103d2b;
+    margin-bottom:18px;
 }
 
-footer span {
-    color: #d4af37;
+.intro p{
+    color:#5c665f;
+    margin-bottom:14px;
 }
 
-@media (max-width: 800px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
+.intro-box{
+    background:#f5f6f1;
+    border-left:4px solid #d4af37;
+    padding:30px;
+}
+
+.intro-box h3{
+    color:#103d2b;
+    margin-bottom:10px;
+}
+
+/* SECTIONS */
+
+.section{
+    padding:80px 0;
+}
+
+.section-light{
+    background:#f7f8f5;
+}
+
+.section-white{
+    background:white;
+}
+
+.section-heading{
+    max-width:700px;
+    margin-bottom:45px;
+}
+
+.section-heading.center{
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+
+.section-heading h2{
+    color:#103d2b;
+    font-size:38px;
+    line-height:1.2;
+    margin-bottom:14px;
+}
+
+.section-heading p{
+    color:#68716b;
+}
+
+/* BUSINESS / CANDIDATE */
+
+.audience-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.audience-card{
+    padding:38px;
+    background:white;
+    border:1px solid #e2e6e0;
+    border-radius:8px;
+    position:relative;
+    overflow:hidden;
+}
+
+.audience-card:before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:4px;
+    background:#d4af37;
+}
+
+.audience-card h3{
+    color:#103d2b;
+    font-size:25px;
+    margin-bottom:12px;
+}
+
+.audience-card p{
+    color:#626b65;
+    margin-bottom:22px;
+}
+
+.audience-card ul{
+    list-style:none;
+}
+
+.audience-card li{
+    padding:9px 0;
+    border-bottom:1px solid #edf0ec;
+    color:#424b45;
+}
+
+.audience-card li:before{
+    content:"✓";
+    color:#b18b1d;
+    font-weight:bold;
+    margin-right:10px;
+}
+
+/* SERVICES */
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.service-card{
+    background:white;
+    padding:30px;
+    border:1px solid #e1e5df;
+    border-radius:8px;
+    transition:.2s;
+}
+
+.service-card:hover{
+    transform:translateY(-4px);
+    border-color:#d4af37;
+}
+
+.service-number{
+    color:#d4af37;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:18px;
+}
+
+.service-card h3{
+    color:#103d2b;
+    font-size:20px;
+    margin-bottom:12px;
+}
+
+.service-card p{
+    color:#69716b;
+    font-size:14px;
+}
+
+/* WHY HWP */
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.why-card{
+    padding:25px;
+    background:#f6f7f3;
+    border-radius:7px;
+}
+
+.why-card h3{
+    color:#103d2b;
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.why-card p{
+    color:#69716b;
+    font-size:14px;
+}
+
+/* ABOUT */
+
+.about-box{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:55px;
+    align-items:center;
+}
+
+.about-box h2{
+    color:#103d2b;
+    font-size:40px;
+    margin-bottom:18px;
+}
+
+.about-box p{
+    color:#5f6862;
+    margin-bottom:15px;
+}
+
+.founder-card{
+    background:#103d2b;
+    color:white;
+    padding:38px;
+    border-radius:8px;
+}
+
+.founder-card .label{
+    color:#d4af37;
+    font-size:12px;
+    letter-spacing:2px;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.founder-card h3{
+    font-size:29px;
+    margin:8px 0;
+}
+
+.founder-card p{
+    color:#dce6df;
+}
+
+/* CTA */
+
+.cta{
+    background:#103d2b;
+    color:white;
+    padding:75px 0;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:40px;
+    margin-bottom:12px;
+}
+
+.cta p{
+    color:#dce6df;
+    max-width:650px;
+    margin:0 auto 28px;
+}
+
+/* CONTACT */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.contact-card{
+    background:white;
+    padding:32px;
+    border:1px solid #e1e5df;
+    border-radius:8px;
+}
+
+.contact-card h3{
+    color:#103d2b;
+    margin-bottom:10px;
+}
+
+.contact-card p{
+    color:#68716b;
+    margin-bottom:20px;
+}
+
+.contact-link{
+    display:inline-block;
+    background:#103d2b;
+    color:white;
+    padding:12px 20px;
+    border-radius:5px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0b2c1f;
+    color:#cbd5ce;
+    padding:30px 0;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    align-items:center;
+}
+
+.footer-logo{
+    font-size:22px;
+    font-weight:bold;
+    color:white;
+}
+
+.footer-logo span{
+    color:#d4af37;
+}
+
+.footer-links{
+    display:flex;
+    gap:20px;
+}
+
+.footer-links a{
+    color:#cbd5ce;
+    font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
     }
 
-    nav a {
-        margin: 0 7px;
+    .hero h1{
+        font-size:43px;
     }
 
-    .hero h1 {
-        font-size: 38px;
+    .intro-grid,
+    .about-box,
+    .audience-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
     }
 
-    .cards {
-        grid-template-columns: 1fr;
+    .service-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .why-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .container{
+        width:90%;
+    }
+
+    .hero{
+        padding:75px 0;
+    }
+
+    .hero h1{
+        font-size:37px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .section{
+        padding:60px 0;
+    }
+
+    .section-heading h2,
+    .intro h2,
+    .about-box h2{
+        font-size:31px;
+    }
+
+    .service-grid,
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-content{
+        flex-direction:column;
+        text-align:center;
     }
 }
 </style>
@@ -189,146 +559,483 @@ footer span {
 
 <body>
 
+<!-- HEADER -->
+
 <header>
+<div class="container navbar">
+
     <div class="logo">HWP<span>.</span></div>
 
-    <nav>
+    <nav class="nav-links">
         <a href="#about">About</a>
         <a href="#solutions">Solutions</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
+        <a href="#contact" class="nav-btn">Work With HWP</a>
     </nav>
+
+</div>
 </header>
 
+
+<!-- HERO -->
+
 <section class="hero">
-    <h1>People. Careers. <span>Business.</span></h1>
+<div class="container">
 
-    <p>
-        HR, recruitment and career solutions designed to connect
-        the right people with the right opportunities.
-    </p>
+    <div class="hero-content">
 
-    <a href="#contact" class="button">Work With HWP</a>
-    <a href="#services" class="button secondary">Explore Services</a>
-</section>
+        <div class="badge">
+            HR • Recruitment • Career Solutions
+        </div>
 
-<section id="about" class="about">
-
-    <div class="section-title">
-        <h2>About HWP</h2>
-        <p>Human-focused solutions for modern careers and businesses.</p>
-    </div>
-
-    <div class="about-content">
+        <h1>
+            Connecting <span>People</span>, Careers & Businesses.
+        </h1>
 
         <p>
-            HWP — HR World Prime — works across recruitment,
-            HR solutions, career support and professional development.
+            HWP — HR World Prime supports companies with recruitment
+            and HR solutions while helping professionals move forward
+            with practical career and job support.
+        </p>
+
+        <div class="buttons">
+            <a href="#contact" class="btn btn-gold">
+                Hire With HWP
+            </a>
+
+            <a href="#services" class="btn btn-outline">
+                Explore Services
+            </a>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro" id="about">
+<div class="container intro-grid">
+
+    <div>
+        <div class="small-title">About HWP</div>
+
+        <h2>
+            One place for people, hiring & career solutions.
+        </h2>
+
+        <p>
+            HWP — HR World Prime works across recruitment,
+            HR support, career guidance and professional development.
         </p>
 
         <p>
-            We support companies with hiring and HR requirements,
-            while helping candidates navigate their careers,
-            job search and professional growth.
+            Our approach is simple: understand the requirement,
+            identify the right direction and create practical
+            solutions around it.
+        </p>
+    </div>
+
+    <div class="intro-box">
+        <h3>What HWP focuses on</h3>
+
+        <p>
+            Helping businesses find relevant talent and helping
+            professionals navigate career decisions, job search
+            and professional growth.
         </p>
 
+        <p>
+            From hiring collaboration to candidate support,
+            HWP brings multiple HR and career needs together.
+        </p>
     </div>
 
+</div>
 </section>
 
-<section id="solutions">
 
-    <div class="section-title">
-        <h2>What We Do</h2>
-        <p>Solutions for both businesses and professionals.</p>
+<!-- FOR WHOM -->
+
+<section class="section section-light" id="solutions">
+<div class="container">
+
+    <div class="section-heading center">
+        <div class="small-title">Our Focus</div>
+
+        <h2>
+            Solutions for Companies & Professionals
+        </h2>
+
+        <p>
+            Whether you are hiring or planning your next career move,
+            HWP provides focused support for the requirement.
+        </p>
     </div>
 
-    <div class="cards">
 
-        <div class="card">
-            <h3>Recruitment</h3>
+    <div class="audience-grid">
+
+        <div class="audience-card">
+
+            <h3>For Companies</h3>
+
             <p>
-                IT & Non-IT hiring support with a focus on
-                relevant profiles and practical recruitment needs.
+                Recruitment and HR support for organizations
+                looking to build and strengthen their teams.
+            </p>
+
+            <ul>
+                <li>IT & Non-IT Recruitment</li>
+                <li>Hiring Collaboration</li>
+                <li>Talent Sourcing</li>
+                <li>HR Support</li>
+                <li>Recruitment Partnerships</li>
+            </ul>
+
+        </div>
+
+
+        <div class="audience-card">
+
+            <h3>For Candidates</h3>
+
+            <p>
+                Practical career and job-search support for
+                freshers, experienced professionals and career changers.
+            </p>
+
+            <ul>
+                <li>Career Direction</li>
+                <li>Job Search Strategy</li>
+                <li>Resume Support</li>
+                <li>Interview Preparation</li>
+                <li>LinkedIn & Professional Support</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="section section-white" id="services">
+<div class="container">
+
+    <div class="section-heading">
+        <div class="small-title">What We Offer</div>
+
+        <h2>
+            Our Services
+        </h2>
+
+        <p>
+            Flexible HR, recruitment and career solutions
+            based on your requirement.
+        </p>
+    </div>
+
+
+    <div class="service-grid">
+
+        <div class="service-card">
+            <div class="service-number">01 / RECRUITMENT</div>
+            <h3>IT & Non-IT Hiring</h3>
+            <p>
+                Recruitment support for organizations looking
+                for relevant candidates across business functions.
             </p>
         </div>
 
-        <div class="card">
+
+        <div class="service-card">
+            <div class="service-number">02 / BUSINESS</div>
+            <h3>Hiring Collaboration</h3>
+            <p>
+                Collaboration support for companies with
+                active or recurring hiring requirements.
+            </p>
+        </div>
+
+
+        <div class="service-card">
+            <div class="service-number">03 / HR</div>
             <h3>HR Solutions</h3>
             <p>
-                HR support and people solutions designed around
-                business requirements and workforce needs.
+                Practical HR support designed around people,
+                processes and business requirements.
             </p>
         </div>
 
-        <div class="card">
-            <h3>Career Support</h3>
+
+        <div class="service-card">
+            <div class="service-number">04 / CAREER</div>
+            <h3>Career Guidance</h3>
             <p>
-                Career guidance, resume support, interview preparation
-                and practical job-search assistance.
+                Support for professionals who are confused,
+                changing direction or planning their next move.
             </p>
         </div>
 
-    </div>
 
-</section>
-
-<section id="services">
-
-    <div class="section-title">
-        <h2>Our Services</h2>
-        <p>Choose the support that fits your requirement.</p>
-    </div>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>For Companies</h3>
+        <div class="service-card">
+            <div class="service-number">05 / JOB SEARCH</div>
+            <h3>Job Search Support</h3>
             <p>
-                Recruitment support, hiring collaboration,
-                HR assistance and talent sourcing.
+                Practical guidance for improving job search,
+                applications, positioning and follow-up.
             </p>
         </div>
 
-        <div class="card">
-            <h3>For Candidates</h3>
-            <p>
-                Resume review, job-search strategy,
-                interview preparation and career guidance.
-            </p>
-        </div>
 
-        <div class="card">
+        <div class="service-card">
+            <div class="service-number">06 / PROFESSIONAL</div>
             <h3>Professional Growth</h3>
             <p>
-                Support for LinkedIn presence, career direction,
-                personal development and professional positioning.
+                Support with resumes, LinkedIn presence,
+                interviews and professional development.
             </p>
         </div>
 
     </div>
 
+</div>
 </section>
 
-<section class="cta" id="contact">
 
-    <h2>Let's Work Together</h2>
+<!-- WHY HWP -->
+
+<section class="section section-light">
+<div class="container">
+
+    <div class="section-heading center">
+        <div class="small-title">Why HWP</div>
+
+        <h2>
+            Practical. Focused. People-Centred.
+        </h2>
+
+        <p>
+            Every requirement is different. Our approach starts
+            with understanding the actual need.
+        </p>
+    </div>
+
+
+    <div class="why-grid">
+
+        <div class="why-card">
+            <h3>Requirement First</h3>
+            <p>
+                We focus on understanding what the business
+                or professional actually needs.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <h3>Relevant Support</h3>
+            <p>
+                Solutions are structured around the specific
+                requirement rather than a one-size-fits-all approach.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <h3>Professional Approach</h3>
+            <p>
+                Clear communication and practical execution
+                remain central to our work.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <h3>Long-Term Focus</h3>
+            <p>
+                We aim to build meaningful professional and
+                business relationships beyond a single requirement.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- ABOUT / FOUNDER -->
+
+<section class="section section-white">
+<div class="container about-box">
+
+    <div>
+
+        <div class="small-title">HWP</div>
+
+        <h2>
+            Built around people and possibilities.
+        </h2>
+
+        <p>
+            HWP brings together recruitment, HR and career
+            support under one professional platform.
+        </p>
+
+        <p>
+            The objective is to make HR and career support
+            more accessible, practical and focused on real requirements.
+        </p>
+
+    </div>
+
+
+    <div class="founder-card">
+
+        <div class="label">Leadership</div>
+
+        <h3>Nidhi</h3>
+
+        <p>
+            Founder & Director, HWP
+        </p>
+
+        <p style="margin-top:18px;">
+            Working across recruitment, HR and career-focused
+            solutions for businesses and professionals.
+        </p>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+<div class="container">
+
+    <h2>
+        Have a Hiring or Career Requirement?
+    </h2>
 
     <p>
-        Looking to hire, grow your career or explore the right HR solution?
-        Let's connect.
+        Tell us what you are looking for and let's explore
+        the right way to move forward.
     </p>
 
-    <a href="https://www.linkedin.com/" class="button">
-        Connect on LinkedIn
-    </a>
+    <div class="buttons" style="justify-content:center;">
 
+        <a href="#contact" class="btn btn-gold">
+            Connect With HWP
+        </a>
+
+        <a href="#services" class="btn btn-outline">
+            View Services
+        </a>
+
+    </div>
+
+</div>
 </section>
+
+
+<!-- CONTACT -->
+
+<section class="section section-light" id="contact">
+<div class="container">
+
+    <div class="section-heading center">
+
+        <div class="small-title">Connect</div>
+
+        <h2>
+            Let's Start a Conversation
+        </h2>
+
+        <p>
+            For hiring collaborations, HR requirements,
+            career support or professional queries.
+        </p>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+        <div class="contact-card">
+
+            <h3>For Companies</h3>
+
+            <p>
+                Looking for recruitment support or a hiring
+                collaboration? Connect with HWP.
+            </p>
+
+            <a href="https://www.linkedin.com/"
+               target="_blank"
+               class="contact-link">
+                Connect on LinkedIn
+            </a>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <h3>For Professionals</h3>
+
+            <p>
+                Need career, job-search or professional support?
+                Explore the available services.
+            </p>
+
+            <a href="https://www.linkedin.com/"
+               target="_blank"
+               class="contact-link">
+                Connect With HWP
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- FOOTER -->
 
 <footer>
-    <p>
-        © 2026 <span>HWP</span> — HR World Prime. All rights reserved.
-    </p>
+<div class="container footer-content">
+
+    <div>
+        <div class="footer-logo">HWP<span>.</span></div>
+
+        <small>
+            HR World Prime
+        </small>
+    </div>
+
+    <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div>
+        <small>
+            © 2026 HWP. All rights reserved.
+        </small>
+    </div>
+
+</div>
 </footer>
 
 </body>
